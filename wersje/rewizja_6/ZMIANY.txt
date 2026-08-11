@@ -1,0 +1,9 @@
+LOG ZMIAN - REWIZJA 6 (Vertical Grid & Typography)
+-----------------------------------------------
+Data: Maj 2026
+
+GŁÓWNE ZMIANY:
+1. Ujednolicenie typografii do czcionki Montserrat (zgodnie z systemem designu).
+2. Zmiana układu Portfolio na pionową siatkę (Vertical Grid).
+3. Korekta rozmiarów fontów w sekcji "O mnie" dla lepszej czytelności.
+4. Optymalizacja responsywności menu głównego.

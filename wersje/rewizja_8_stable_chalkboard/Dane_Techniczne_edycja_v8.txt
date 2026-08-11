@@ -1,0 +1,60 @@
+DOKUMENTACJA TECHNICZNA EDYCJI - MKW STUDIO (REWIZJA 8)
+Data aktualizacji: 2026-05-04
+Cel: Kompleksowa referencja dla edycji wizualnej, funkcjonalnej i tekstowej (Wersja z Asystentem AI i Skalowaniem UI).
+
+--- USTAWIENIA GLOBALNE (BASE) ---
+- CZCIONKI: 
+    * Montserrat (Główna, nowoczesna) - UŻYWANA WE WSZYSTKICH SEKCJACH PROFESJONALNYCH.
+    * Satisfy / Sacramento (Akcenty odręczne, ozdobne)
+    * Bad Script (Efekt pisma kredą)
+- KOLORY: 
+    * Tło: #0c0c0c (Głęboki węgiel)
+    * Akcent (Primary): #DAC7B0 (Ciepły beż)
+    * Akcent (Hover): #c4b19a (Pociemnienie o 2-3 tony - OBOWIĄZKOWE DLA KAŻDEGO PRZYCISKU)
+    * Tekst: #D9D9D9 (Kredowa biel)
+- INTERAKCJA (HOVER RULE):
+    * Każdy przycisk po najechaniu MUSI pociemnić tło do koloru #c4b19a.
+    * Przycisk Instagrama dodatkowo obraca się o -3 stopnie (całość) i +15 stopni (ikona).
+- SKALOWANIE UI:
+    * Logo: Wysokość 110px (+40% względem oryginału).
+    * Linki Menu: 1.1rem (+40%).
+    * Przyciski Hero: Powiększone o 50% względem standardu.
+
+--- SEKCJA: NAWIGACJA (NAVBAR) ---
+- BACKGROUND: Start: Przezroczysty; Scroll: Gradient "Moonlight Gray" + Glassmorphism.
+- PRZYCISKI: Przycisk tel. z efektem "50% Fill" (tło wypełnia się do połowy szerokości po najechaniu).
+- LOGO: Wysokość 110px, Montserrat Bold + Sacramento Studio.
+
+--- SEKCJA 1: HERO ---
+- BACKGROUND: #0c0c0c z warstwą kredową; Płynne przejście do obrazu "hero_bg.png" (2s).
+- PRZYCISKI (Scale: +50%): 
+    * "NASZE PROJEKTY" (Pill, Beige).
+    * "ZOSTAW ZGŁOSZENIE" (Link z podkreśleniem).
+    * "INSTAGRAM" (Pill, Beige, z ikoną i rotacją).
+- EFEKT WEJŚCIA: Premium Cascade (staggered fade-up, opóźnienie 0.3s między przyciskami).
+
+--- SEKCJA 2: O MNIE ---
+- POLA TEKSTOWE (Scale Upgrade):
+    * AKCENTY (H2): Montserrat Bold, 2.8rem, Uppercase.
+    * TYTUŁ (H3): Montserrat Bold, 2.8rem.
+    * BODY: Montserrat Light, 1.4rem, line-height 1.7.
+- SPÓJNOŚĆ: Wyłącznie czcionka Montserrat (brak Sacramento w tekście ciągłym).
+
+--- MODUŁ: AI WIZARD (FORMULARZ GŁOSOWY) ---
+- TECHNOLOGIA: Web Speech API (natywne wsparcie Chrome).
+- FUNKCJE:
+    * Dual-Mode: Tekst / Głos.
+    * Smart Parser: Wykrywanie słów kluczowych (metraż, styl, budżet, lokalizacja) i tworzenie ustrukturyzowanej notatki.
+    * Cenzura: Filtr wulgaryzmów wbudowany w proces transkrypcji.
+    * UX: Dynamicznie rosnące pole textarea (sync z scrollHeight).
+- STEROWANIE: Ręczne zatrzymanie nagrywania ("ZAKOŃCZ I GENERUJ BRIEF").
+
+--- SEKCJA 3: PORTFOLIO (COLLAGE GRID) ---
+- EFEKTY: GSAP Scrub (1.5), Asynchroniczny Slide-up, Hover Scale 1.08.
+- TYTUŁY: Montserrat Bold, 2.8rem (ujednolicone z O mnie).
+
+--- SEKCJA 4: OFERTA (PROCES) ---
+- FORMAT: Interaktywny Akordeon z ikonami "+" i płynną animacją max-height.
+
+--- KONTAKT ---
+- STYL: Glassmorphism Card, Underline Input, Beige Button (#DAC7B0 -> #c4b19a on hover).

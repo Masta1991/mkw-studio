@@ -1,0 +1,9 @@
+LOG ZMIAN - REWIZJA 7 (Collage Grid & Async Motion)
+-----------------------------------------------
+Data: Maj 2026
+
+GŁÓWNE ZMIANY:
+1. Wprowadzenie nowoczesnej siatki "Collage Grid" w Portfolio (zróżnicowane rozmiary kafelków).
+2. Implementacja asynchronicznej animacji wjazdu projektów (Asynchronous Slide-up).
+3. Dodanie efektu GSAP Scrub (płynny ruch powiązany ze skrolowaniem).
+4. Rozbudowa danych technicznych o precyzyjne wymiary kontenerów i marginesów.

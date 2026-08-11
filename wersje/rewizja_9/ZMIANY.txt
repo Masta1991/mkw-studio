@@ -1,0 +1,11 @@
+LOG ZMIAN - REWIZJA 9 (Interaction & Performance - DRAFT)
+-------------------------------------------------------
+Data: 2026-05-04
+
+GŁÓWNE ZMIANY:
+1. Uniwersalna interakcja przycisków: Wszystkie przyciski typu "Pill" na stronie otrzymały dynamiczny obrót (-12 stopni) i skalowanie (1.05) na hover.
+2. Zasada Hover (2-3 tony): Wdrożenie obowiązkowego pociemniania tła przycisków do koloru #c4b19a.
+3. Optymalizacja "O mnie": Skalowanie typografii - nagłówek "Nazywam się..." ustawiony na 2.1rem dla lepszej hierarchii.
+4. Wydajność (Performance): Implementacja Lazy Loadingu dla wszystkich zdjęć portfolio i sekcji o mnie.
+5. Dokumentacja: Aktualizacja skryptu głównego i stworzenie Danych Technicznych v8.
+6. Naprawa Instagrama: Gwarantowana rotacja przez JS (ID #hero-insta-cta) odporna na konflikty GSAP.

@@ -1,0 +1,630 @@
+:root {
+    --white: #FFFFFF;
+    --anthracite: #292929;
+    --beige: #F5F5F5;
+    --text-main: #292929;
+    --text-light: #666666;
+    --font-main: 'Montserrat', sans-serif;
+    --font-accent: 'Satisfy', cursive;
+    --font-chalk: 'Bad Script', cursive;
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.accent-font {
+    font-family: var(--font-accent);
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+/* Cursor Spotlight - Warm Night Lamp Effect */
+#cursor-spotlight {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    /* Warm amber/golden glow like a designer lamp */
+    background: radial-gradient(circle, 
+        rgba(255, 200, 100, 0.15) 0%, 
+        rgba(255, 160, 50, 0.08) 30%, 
+        rgba(255, 120, 0, 0.03) 60%, 
+        transparent 85%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background 0.5s;
+    mix-blend-mode: screen; /* Makes the glow look more natural on dark backgrounds */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-svg {
+    height: 80px;
+    width: auto;
+    overflow: visible;
+}
+
+.logo:hover #logo-svg {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-nav {
+    background-color: rgb(218, 199, 176);
+    color: #292929 !important; /* Dark text for contrast */
+    padding: 0.8rem 2.2rem;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600 !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: rgb(196, 171, 142); /* Approx 2-3 tones darker */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Chalkboard hero variant */
+.hero-chalkboard {
+    background-color: #0c0c0c;
+}
+
+.hero-chalkboard::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Realistic chalkboard background with smudges, dust and streaks */
+.chalk-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    background-color: #0c0c0c;
+    background-image: 
+        /* Large cloudy smudges (poorly wiped areas) */
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='cloud'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004' numOctaves='3'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23cloud)' opacity='0.08'/%3E%3C/svg%3E"),
+        /* Subtle dust/smudge layer 1 */
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 45%),
+        /* Subtle dust/smudge layer 2 */
+        radial-gradient(circle at 80% 75%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
+        /* Chalk wiping streaks - horizontal/wavy */
+        repeating-linear-gradient(12deg, transparent 0, transparent 150px, rgba(255,255,255,0.01) 160px, transparent 170px),
+        /* Fine grain/dust texture */
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.12'/%3E%3C/svg%3E");
+    background-size: cover, cover, cover, cover, 400px 400px;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Dark hero overlay removed — now solid black chalkboard */
+.hero::after {
+    display: none;
+}
+
+.hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero .container.hero-content {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+    padding-left: 4rem; /* Keep the standard padding */
+}
+
+.hero-content {
+    color: white;
+    max-width: 1400px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5.4vw, 5.4rem);
+    line-height: 1.4;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-chalk);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.95);
+    /* Clean handwritten chalk look */
+    text-shadow:
+        0 0 1px rgba(255,255,255,0.8),
+        0 0 30px rgba(255,255,255,0.08);
+    min-height: 3.5em; /* Prevents layout jumping */
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Cursor removed for manual writing look */
+.typewriter-cursor {
+    display: none;
+}
+
+.hero h2 {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0.75;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.btn-ghost {
+    background-color: rgb(218, 199, 176);
+    color: #292929;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-ghost:hover {
+    background-color: rgb(196, 171, 142);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.link-underline {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.link-underline:hover::after {
+    transform: scaleX(1);
+}
+
+/* Sections */
+.section {
+    padding: 120px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 1.3;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.signature {
+    font-size: 3rem;
+    margin-top: 4rem;
+}
+
+/* Portfolio Section */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--anthracite);
+}
+
+.divider {
+    height: 1px;
+    background: var(--anthracite);
+    flex-grow: 1;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.btn-more {
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card-info {
+    margin-top: 1.5rem;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-info span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Process Section */
+.process {
+    background: var(--white);
+}
+
+.process h2 {
+    text-align: center;
+    margin-bottom: 6rem;
+    font-size: 2.5rem;
+}
+
+.accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(41, 41, 41, 0.1);
+}
+
+.accordion-header {
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.step-num {
+    font-size: 1rem;
+    margin-right: 3rem;
+    font-weight: 700;
+    opacity: 0.3;
+}
+
+.accordion-header h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+}
+
+.content-inner {
+    padding: 0 0 2.5rem 4rem;
+    color: var(--text-light);
+    font-weight: 300;
+    max-width: 80%;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--beige);
+}
+
+.contact-card {
+    background: white;
+    padding: 6rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 50px 100px rgba(41, 41, 41, 0.05);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.minimal-form .form-group {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.minimal-form input, 
+.minimal-form select, 
+.minimal-form textarea {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.minimal-form label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.minimal-form input:focus,
+.minimal-form select:focus,
+.minimal-form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid var(--anthracite);
+}
+
+.minimal-form input:focus + label,
+.minimal-form input:valid + label,
+.minimal-form select:focus + label,
+.minimal-form select:not(:placeholder-shown) + label,
+.minimal-form textarea:focus + label,
+.minimal-form textarea:valid + label {
+    top: -1rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--anthracite);
+}
+
+.btn-primary {
+    background: var(--anthracite);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(41, 41, 41, 0.2);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--text-light);
+}
+
+/* Hero title starts hidden — typewriter JS reveals it */
+#hero-title {
+    opacity: 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@media (max-width: 1024px) {
+    .about-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .nav-container {
+        padding: 0 2rem;
+    }
+    
+    .contact-card {
+        padding: 3rem;
+    }
+}

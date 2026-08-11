@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKW Studio | Architektura Wnętrz — Małgorzata Wojtysiak</title>
+    <meta name="description"
+        content="Personalizowane projekty wnętrz i kompleksowe wykończenie pod klucz w Warszawie. Architektura zdefiniowana przez ergonomię, światło i naturalne materiały.">
+
+    <!-- Fonts: Playfair Display (Editorial Serif) + Montserrat (Clean Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&subset=latin,latin-ext&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=40">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Site Header & Navigation (Warm Minimalist) -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="#hero" class="brand-logo" aria-label="MKW Studio Strona Główna">
+                <div class="logo-house-icon">
+                    <svg viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 20L21 4L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 17.5V32H35V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-typography">
+                    <span class="logo-title">mkw <span class="logo-script">Studio</span></span>
+                    <span class="logo-subtitle">ARCHITEKTURA WNĘTRZ — MAŁGORZATA WOJTYSIAK</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-item active">Home</a></li>
+                    <li><a href="#portfolio" class="nav-item">Realizacje</a></li>
+                    <li><a href="#transformation" class="nav-item">Metamorfoza</a></li>
+                    <li><a href="#offer" class="nav-item">Oferta</a></li>
+                    <li><a href="#about" class="nav-item">O mnie</a></li>
+                    <li><a href="#contact" class="nav-item">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Right Group -->
+            <div class="header-right">
+                <a href="https://www.instagram.com/mkwstudio_/" target="_blank" rel="noopener" class="insta-icon-btn" title="Instagram MKW Studio">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn-cta-sage">Skontaktuj się z nami</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu mobilne">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+            <li><a href="#portfolio" class="mobile-nav-link">Realizacje</a></li>
+            <li><a href="#transformation" class="mobile-nav-link">Metamorfoza</a></li>
+            <li><a href="#offer" class="mobile-nav-link">Oferta</a></li>
+            <li><a href="#about" class="mobile-nav-link">O mnie</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Kontakt</a></li>
+            <li><a href="tel:+48600100100" class="mobile-contact-pill">📞 +48 600 100 100</a></li>
+        </ul>
+    </div>
+
+    <main id="main-content">
+        <!-- 1. Hero Section: Clean Editorial Split Composition -->
+        <section id="hero" class="hero-clean-section">
+            <div class="hero-clean-container">
+                <!-- Left Column: Pure Clean Typography & Actions -->
+                <div class="hero-text-col">
+                    <span class="hero-eyebrow-tag">PRACOWNIA ARCHITEKTURY WNĘTRZ — WARSZAWA</span>
+                    
+                    <h1 class="hero-main-title">
+                        Architektura Wnętrz<br>
+                        zdefiniowana przez formę<br>
+                        i światło.
+                    </h1>
+
+                    <p class="hero-lead-text">
+                        Personalizowane projekty rezydencji i apartamentów oraz kompleksowe wykończenie pod klucz. 
+                        Łączymy naturalny kamień, drewno i precyzję wykonawczą.
+                    </p>
+
+                    <div class="hero-action-buttons">
+                        <a href="#portfolio" class="btn-sage">Odkryj realizacje</a>
+                        <a href="#contact" class="btn-outline-dark">Umów konsultację</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Framed Luxury Interior Showcase -->
+                <div class="hero-visual-col">
+                    <div class="hero-portal-frame">
+                        <img src="Zdjecia/hero_day.png" alt="Architektura Wnętrz MKW Studio" class="hero-portal-image">
+                        <div class="hero-portal-badge">
+                            <span class="portal-badge-title">Penthouse Warszawa</span>
+                            <span class="portal-badge-sub">Realizacja MKW Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Realizacje / Portfolio Section (Clean 2-Column Editorial Grid) -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-center-heading">
+                    <h2 class="section-title-editorial">Realizacje</h2>
+                    <p class="section-subtitle">Każde wnętrze to indywidualny dialog z potrzebami i stylem życia inwestora.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="portfolio-filter-bar" id="portfolio-filters">
+                    <button class="filter-tab active" data-filter="all">Wszystkie</button>
+                    <button class="filter-tab" data-filter="apartments">Apartamenty</button>
+                    <button class="filter-tab" data-filter="houses">Domy</button>
+                    <button class="filter-tab" data-filter="commercial">Lofty & Komercyjne</button>
+                </div>
+
+                <!-- Projects 2-Column Grid -->
+                <div class="realizacje-grid" id="realizacje-container">
+                    <!-- Injected by main.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Metamorfoza Przed / Po (Interactive Before/After Slider) -->
+        <section id="transformation" class="transformation-section">
+            <div class="container">
+                <div class="section-center-heading">
+                    <h2 class="section-title-editorial">Metamorfoza</h2>
+                    <p class="section-subtitle">Przeciągnij suwak, aby zobaczyć transformację apartamentu ze stanu deweloperskiego w gotowe wnętrze.</p>
+                </div>
+
+                <div class="before-after-container" id="before-after-slider">
+                    <div class="before-img-layer">
+                        <img src="Zdjecia/hero_before_raw.png" alt="Przed: Stan Deweloperski">
+                        <span class="state-label state-before">PRZED: STAN DEWELOPERSKI</span>
+                    </div>
+                    <div class="after-img-layer" id="after-layer">
+                        <img src="Zdjecia/hero_day.png" alt="Po: Realizacja MKW Studio">
+                        <span class="state-label state-after">PO: PROJEKT MKW STUDIO</span>
+                    </div>
+                    <div class="slider-drag-handle" id="slider-handle">
+                        <div class="handle-circle">
+                            <span>↔</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Oferta / Zakres Współpracy -->
+        <section id="offer" class="offer-section">
+            <div class="container">
+                <div class="section-center-heading">
+                    <h2 class="section-title-editorial">Oferta</h2>
+                    <p class="section-subtitle">Dopasowujemy formę współpracy do Twoich indywidualnych potrzeb i etapu inwestycji.</p>
+                </div>
+
+                <div class="offer-cards-grid" id="offer-grid">
+                    <!-- Injected by main.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. O mnie Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-split-layout">
+                    <div class="about-photo-column">
+                        <div class="about-photo-frame">
+                            <img src="Zdjecia/o%20mnie/gosia_portrait_clean.jpg" alt="Małgorzata Wojtysiak — Architekt Wnętrz" class="about-real-img">
+                        </div>
+                    </div>
+
+                    <div class="about-text-column">
+                        <span class="about-eyebrow">O MNIE</span>
+                        <h2 class="about-title-serif">Nazywam się Małgorzata Wojtysiak</h2>
+                        
+                        <p class="about-p">
+                            Ukończyłam studia na <strong>Politechnice Warszawskiej</strong> oraz na <strong>Akademii Sztuk Pięknych w Warszawie</strong>. 
+                            Swoje doświadczenie zdobywałam w czołowych warszawskich pracowniach zajmujących się kompleksowym projektowaniem wnętrz pod klucz.
+                        </p>
+                        <p class="about-p">
+                            W MKW Studio łączę inżynierską wiedzę techniczną z wrażliwością na proporcje, światło i naturalne materiały: kamień, szczotkowane drewno, len i mosiądz. 
+                            Wierzę, że dobrze zaprojektowana przestrzeń sama w sobie jest piękna, a harmonia i funkcjonalność to fundamenty nowoczesnego domu.
+                        </p>
+
+                        <div class="about-pillars">
+                            <div class="pillar-box">
+                                <span class="p-num">01</span>
+                                <h4>Ergonomia & Intuicja</h4>
+                                <p>Układ skrojony pod Twój rytm dnia.</p>
+                            </div>
+                            <div class="pillar-box">
+                                <span class="p-num">02</span>
+                                <h4>Naturalne Materiały</h4>
+                                <p>Kamień i drewno starzejące się z godnością.</p>
+                            </div>
+                            <div class="pillar-box">
+                                <span class="p-num">03</span>
+                                <h4>Nadzór pod Klucz</h4>
+                                <p>Pełna koordynacja i spokój na budowie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Kontakt & Inteligentny Asystent Briefu AI -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-center-heading">
+                    <h2 class="section-title-editorial">Kontakt</h2>
+                    <p class="section-subtitle">Porozmawiajmy o Twoim projekcie. Zadzwoń, napisz lub stwórz szybki brief.</p>
+                </div>
+
+                <div class="contact-main-grid">
+                    <!-- Left: Contact Details -->
+                    <div class="contact-details-box">
+                        <div class="c-info-item">
+                            <span class="c-label">TELEFON</span>
+                            <a href="tel:+48600100100" class="c-value">+48 600 100 100</a>
+                            <span class="c-note">Pn – Pt: 9:00 – 18:00</span>
+                        </div>
+                        <div class="c-info-item">
+                            <span class="c-label">E-MAIL</span>
+                            <a href="mailto:kontakt@mkwstudio.pl" class="c-value">kontakt@mkwstudio.pl</a>
+                            <span class="c-note">Odpowiedź w 24h</span>
+                        </div>
+                        <div class="c-info-item">
+                            <span class="c-label">LOKALIZACJA</span>
+                            <span class="c-value">Warszawa & Cała Polska</span>
+                            <span class="c-note">Mokotów, Wilanów, Konstancin, Śródmieście</span>
+                        </div>
+                        <div class="c-info-item">
+                            <span class="c-label">INSTAGRAM</span>
+                            <a href="https://www.instagram.com/mkwstudio_/" target="_blank" rel="noopener" class="c-value">@mkwstudio_</a>
+                            <span class="c-note">Kulisy z budowy i inspiracje</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form + AI Brief Wizard -->
+                    <div class="contact-form-box">
+                        <!-- AI Brief Assistant Banner -->
+                        <div class="ai-brief-banner">
+                            <div class="ai-banner-header">
+                                <span class="ai-badge">✨ Asystent Briefu AI</span>
+                                <h4>Stwórz profesjonalny brief w 2 minuty</h4>
+                            </div>
+                            <p>Możesz odpowiedzieć na kilka pytań lub nagrać notatkę głosową — asystent uporządkuje Twoje wytyczne.</p>
+                            <button type="button" id="start-ai-wizard" class="btn-ai-trigger">Uruchom Asystenta Briefu →</button>
+
+                            <!-- AI Wizard Popup Steps -->
+                            <div id="ai-wizard-interface" class="ai-wizard-interface" style="display: none;">
+                                <div class="ai-wizard-top">
+                                    <span class="ai-step-indicator">Krok <span id="ai-step-num">1</span> z 5</span>
+                                    <button type="button" id="ai-wizard-close" class="ai-close-btn">&times;</button>
+                                </div>
+                                <div class="ai-progress-track">
+                                    <div id="ai-progress-bar" class="ai-progress-bar"></div>
+                                </div>
+                                <h4 id="ai-question-title" class="ai-q-title">Jaki jest metraż i lokalizacja Twojej inwestycji?</h4>
+                                
+                                <div class="ai-input-row">
+                                    <input type="text" id="ai-step-input" class="ai-input" placeholder="np. 85 m², Warszawa Wilanów, stan deweloperski">
+                                    <button type="button" id="ai-voice-btn" class="ai-mic-btn" title="Nagraj odpowiedź głosem">🎙️</button>
+                                    <button type="button" id="ai-next-btn" class="btn-sage btn-ai-next">Dalej →</button>
+                                </div>
+
+                                <div id="ai-voice-status" class="ai-voice-status" style="display: none;">
+                                    <div class="audio-waveform"><span></span><span></span><span></span><span></span></div>
+                                    <span class="voice-text">Słucham... Mów swobodnie o metrażu, stylu i budżecie.</span>
+                                    <button type="button" id="ai-stop-voice" class="btn-stop-rec">Gotowe</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Standard Form -->
+                        <form id="contact-form" class="clean-form">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="name">Imię i Nazwisko *</label>
+                                    <input type="text" id="name" name="name" required placeholder="np. Anna Kowalska">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required placeholder="np. anna@domena.pl">
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="phone">Telefon</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="np. +48 600 000 000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-type">Rodzaj Inwestycji</label>
+                                    <select id="project-type" name="project-type">
+                                        <option value="Apartament / Mieszkanie">Apartament / Mieszkanie</option>
+                                        <option value="Dom / Rezydencja">Dom / Rezydencja</option>
+                                        <option value="Wnętrze Komercyjne">Wnętrze Komercyjne</option>
+                                        <option value="Konsultacja">Konsultacja Architektoniczna</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Wiadomość lub wygenerowany brief *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Opisz swoje plany, metraż i lokalizację..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-sage btn-submit-full">Wyślij wiadomość</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-layout">
+                <div class="footer-brand">
+                    <span class="f-logo">mkw Studio</span>
+                    <span class="f-sub">ARCHITEKTURA WNĘTRZ — MAŁGORZATA WOJTYSIAK</span>
+                </div>
+                <div class="footer-nav">
+                    <a href="#portfolio">Realizacje</a>
+                    <a href="#transformation">Metamorfoza</a>
+                    <a href="#offer">Oferta</a>
+                    <a href="#about">O mnie</a>
+                    <a href="#contact">Kontakt</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2026 MKW Studio. Wszelkie prawa zastrzeżone.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Project Detail Case Study Modal -->
+    <div id="project-modal" class="project-modal-backdrop" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Zamknij">&times;</button>
+            <div class="modal-content-area">
+                <div class="modal-hero-header">
+                    <span class="modal-category-chip" id="modal-category">Apartamenty</span>
+                    <h2 id="modal-title" class="modal-title-serif">Apartament w Wilanowie</h2>
+                    <p id="modal-tagline" class="modal-tagline">Azyl spokoju w sercu tętniącej dzielnicy</p>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="modal-specs-bar" id="modal-specs-grid"></div>
+
+                <div class="modal-body-layout">
+                    <div class="modal-narrative">
+                        <h4 class="modal-section-label">O PROJEKCIE I KONCEPCJI</h4>
+                        <div id="modal-story" class="modal-story-text"></div>
+                        <div class="modal-cta-box">
+                            <p>Podoba Ci się ten styl i chcesz omówić swój projekt?</p>
+                            <a href="#contact" class="btn-sage modal-contact-btn" id="modal-contact-link">Zapytaj o podobną realizację →</a>
+                        </div>
+                    </div>
+
+                    <div class="modal-gallery-wrapper">
+                        <h4 class="modal-section-label">GALERIA ZDJĘĆ</h4>
+                        <div class="modal-gallery-grid" id="modal-gallery"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
+        <div class="lightbox-container">
+            <img id="lightbox-image" src="" alt="Powiększenie">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="site_content.js?v=40"></script>
+    <script src="main.js?v=40"></script>
+</body>
+</html>

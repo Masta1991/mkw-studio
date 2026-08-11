@@ -1,0 +1,89 @@
+DOKUMENTACJA TECHNICZNA EDYCJI - MKW STUDIO (REWIZJA 5)
+Data utworzenia: 2026-05-04
+Cel: Referencja dla edycji detali wizualnych i szaty graficznej.
+
+--- USTAWIENIA GLOBALNE (STYL BAZOWY) ---
+- CZCIONKI: 
+    * Montserrat (Główna, nowoczesna)
+    * Satisfy / Sacramento (Akcenty odręczne, ozdobne)
+    * Bad Script (Efekt pisma kredą)
+- KOLORY: 
+    * Tło: #0c0c0c (Głęboki węgiel)
+    * Akcent: #DAC7B0 (Ciepły beż)
+    * Tekst: #D9D9D9 (Kredowa biel)
+- EFEKTY SPECJALNE:
+    * Cursor Spotlight: Radialny gradient bursztynowy podążający za myszką.
+    * Tekstura tablicy (.chalk-bg): Filtr turbulencji SVG + szum.
+
+--- SEKCJA: NAWIGACJA (NAVBAR) ---
+- BACKGROUND: 
+    * Start: Przezroczysty.
+    * Scroll: Gradient "Moonlight Gray" (szary do węgla), Glassmorphism (backdrop-filter: blur 12px).
+- PRZYCISKI: 
+    * Przycisk telefonu: Obramowanie beżowe (#DAC7B0), ikona w kółku, czcionka Montserrat Bold.
+- CZCIONKA: Montserrat 0.8rem, letter-spacing 1px.
+- EFEKTY: Płynne zmniejszanie paddingu przy przewijaniu (klasa .scrolled).
+
+--- SEKCJA 1: HERO ---
+- BACKGROUND: 
+    * Podstawa: #0c0c0c z warstwą kredową.
+    * Reveal: Po animacji tekstu odsłania obraz "hero_bg.png".
+- PRZYCISKI: 
+    * Główny: "ZOBACZ REALIZACJE" - Beżowy "Pill Button", czarny tekst.
+    * Drugorzędny: "UMÓW KONSULTACJĘ" - Biały link z animowanym podkreśleniem.
+- CZCIONKA: 
+    * H1: Bad Script (Efekt kredy).
+    * H2: Montserrat Light, Uppercase, letter-spacing 5px.
+- EFEKTY: 
+    * Typewriter: Animacja pisania znak po znaku z drganiem i blurem.
+    * Ken Burns: Powolne powiększanie obrazu tła w pętli.
+    * Separator: Linia wymiarowa na dole sekcji (beżowa).
+
+--- SEKCJA 2: O MNIE (ABOUT) ---
+- BACKGROUND: #0c0c0c z teksturą tablicy.
+- PRZYCISKI: Brak (tylko linki tekstowe jeśli dodane).
+- CZCIONKA: 
+    * Akcenty ("Kim jestem?", "Jak projektuję?"): Montserrat Bold (zgodna z tytułem), 1rem, Uppercase, kolor beżowy.
+    * Tytuł: Montserrat Uppercase, 1.2rem.
+    * Treść: Montserrat Light, line-height 1.8.
+- EFEKTY: 
+    * Radial Mask: Zdjęcie "zdjecie glowne.jpg" ma miękkie krawędzie wtapiające się w tło.
+    * Reveal: Pojawianie się tekstu od dołu (GSAP).
+    * Separator: Linia wymiarowa z tekstem (np. "1250").
+
+--- SEKCJA 3: PORTFOLIO (SLIDER) ---
+- BACKGROUND: #0c0c0c + tekstura tablicy.
+- PRZYCISKI: 
+    * Strzałki: Okrągłe, beżowe, z ikonami SVG.
+    * Przycisk na karcie: "ZOBACZ REALIZACJĘ" - Styl Ghost (półprzezroczysty).
+- CZCIONKA: 
+    * Tytuł sekcji: Montserrat 2.5rem (Thin/Light).
+    * Tytuł projektu: Bad Script (Kredowy styl).
+    * Kategoria: Montserrat Small Caps, beżowy kolor.
+- EFEKTY: 
+    * Horizontal Track: Płynne przesuwanie kart (JS).
+    * Hover: Rozjaśnienie nakładki na zdjęciu projektu.
+
+--- SEKCJA 4: OFERTA (PROCES) ---
+- BACKGROUND: #0c0c0c + tekstura tablicy.
+- PRZYCISKI: Brak (nagłówki akordeonu są interaktywne).
+- CZCIONKA: 
+    * Nagłówek: Montserrat, lekka, duże odstępy między literami.
+    * Numeracja (01, 02...): Montserrat Bold, kolor beżowy, opacity 0.5.
+- EFEKTY: 
+    * Akordeon: Płynne rozwijanie treści (max-height) z ikoną "+", która obraca się o 45 stopni.
+
+--- SEKCJA 5: KONTAKT ---
+- BACKGROUND: #0c0c0c + tekstura tablicy.
+- PRZYCISKI: 
+    * Przycisk wysyłki: Pełna szerokość, beżowy, zaokrąglony (50px), efekt uniesienia przy hoverze.
+- CZCIONKA: Montserrat (formularz i etykiety).
+- EFEKTY: 
+    * Floating Labels: Etykiety pól (Imię, E-mail) unoszą się i zmniejszają po kliknięciu w pole.
+    * Underline Focus: Linia pod polem zmienia kolor na beżowy przy aktywności.
+    * Glassmorphism Card: Karta kontaktu ma delikatne obramowanie (white 0.08) i rozmycie tła.
+
+--- STOPKA (FOOTER) ---
+- BACKGROUND: #0c0c0c (czysty).
+- CZCIONKA: Montserrat, mała, szary kolor.
+- EFEKTY: Brak.

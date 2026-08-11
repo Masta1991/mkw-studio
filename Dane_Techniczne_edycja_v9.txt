@@ -1,0 +1,82 @@
+DOKUMENTACJA TECHNICZNA EDYCJI - MKW STUDIO (REWIZJA 9)
+Data aktualizacji: 2026-08-11
+Koncepcja: Nowoczesny Minimalizm Architektoniczny (Editorial Luxury Dark Mode)
+Inspiracje: Awwwards Architectural Websites, Trendy Figma 2025/2026, PureBaby interactive album cards.
+
+--- 1. USTAWIENIA GLOBALNE I DESIGN SYSTEM ---
+- TYPOGRAFIA:
+    * Nagłówki H1/H2: 'Syne' (700/800) + 'Playfair Display' / 'Italiana' dla akcentów edytorialnych.
+    * Treść ciągła / UI: 'Plus Jakarta Sans' / 'Montserrat' (300/400/500/600/700) z precyzyjnym trackingiem (letter-spacing: 0.05em - 0.2em).
+- PALETA BARW (ARCHITECTURAL WARM OBSIDIAN):
+    * Tło Główne: #0D0E11 (Głęboki, ciepły obsydian)
+    * Tło Kart i Modali: #14161B (Płynny grafit z rozmyciem szkła)
+    * Akcent Główny (Cashmere / Sand): #D6C5B3 (Ciepły piaskowiec)
+    * Akcent Hover / Glow: #EADFD3 (Kremowe rozświetlenie)
+    * Tekst Główny: #F7F5F0 (Szlachetna biel)
+    * Tekst Pomocniczy: #9CA3AF (Stonowany, czytelny szary)
+    * Linie i Obramowania: 1px solid rgba(255, 255, 255, 0.08) (Hairstroke Minimalist Borders)
+- ELIMINACJA STARYCH ELEMENTÓW:
+    * Całkowite usunięcie podziałek wymiarowych z liczbami (.dimension-separator)
+    * Usunięcie imitacji kredy i pyłu – zastąpienie ultra-czystym, luksusowym wykończeniem.
+
+--- 2. NAWIGACJA (FLOATING ARCHITECTURAL DOCK) ---
+- Układ: Pływający pasek nawigacyjny z efektem Glassmorphism (backdrop-filter: blur(16px)).
+- Logo: Minimalistyczny wektorowy monogram geometryczny MKW Studio.
+- Elementy: O mnie | Portfolio | Oferta | Kontakt | Szybki kontakt telefoniczny (+48 600 100 100).
+
+--- 3. SEKCJA 1: HERO (CINEMATIC LUXURY) ---
+- Tło: Architektoniczna fotografia z subtelnym ruchem Parallax / Ken Burns.
+- Headline: "ARCHITEKTURA WNĘTRZ ZDEFINIOWANA PRZEZ HARMONIĘ, ŚWIATŁO I FORMĘ".
+- Wskaźniki Pracowni (Live Studio Metrics):
+    * 10+ Lat Doświadczenia na rynku
+    * 40+ Zrealizowanych Wnętrz
+    * PW & ASP Architektoniczne Wykształcenie (Politechnika & ASP Warszawa)
+- CTA: "ODKRYJ REALIZACJE" (Primary Pill) + "UMÓW KONSULTACJĘ" (Minimalist Outline).
+
+--- 4. SEKCJA 2: O MNIE (EDITORIAL PORTRAIT) ---
+- Layout: Asymetryczny magazyn architektoniczny.
+- Treść: Historia Małgorzaty Wojtysiak, filozofia ergonomii i szlachetnych materiałów.
+- Filary Projektowe: 3 interaktywne pigułki:
+    01. Funkcjonalność i Ergonomia
+    02. Szlachetne Materiały i Ponadczasowość
+    03. Precyzyjny Nadzór Autorski pod Klucz
+- Plakietka Jakości: "Architekt Wnętrz PW & ASP Warszawa".
+
+--- 5. SEKCJA 3: PORTFOLIO (IMMERSIVE LOOKBOOK) ---
+- Filtrowanie Kategorii: [ Wszystkie | Apartamenty | Domy & Rezydencje | Lofty & Komercyjne ]
+- Karty Projektów (PureBaby-inspired dynamic stack):
+    * Asymetryczny rytm siatki (2-3 kolumny) z pionowym płynnym scrollem.
+    * Efekt Depth / Tilt przy najechaniu myszką.
+    * Tagi parametrów (np. Wilanów • 85 m² • Styl Japandi Luxury).
+    * Płynne powiększenie wizualizacji + przycisk "Eksploruj projekt →".
+- Pełna baza 8 projektów w site_content.js:
+    1. Apartament w Wilanowie (85 m² - Japandi Luxury)
+    2. Dom w Konstancinie (240 m² - Modern Scandi)
+    3. Studio na Mokotowie (48 m² - Compact Minimal)
+    4. Loft na Pradze (115 m² - Industrial Elegance)
+    5. Rezydencja Konstancin (380 m² - Ultra Luxury)
+    6. Penthouse Saska Kępa (160 m² - Warm Contemporary)
+    7. Minimalistyczne Studio (42 m² - Nordic Pure)
+    8. Willa pod Warszawą (290 m² - Organic Architecture)
+
+--- 6. MODAL PROJEKTU (FULLSCREEN CASE STUDY) ---
+- Pełny widok studium przypadku po kliknięciu w dowolny projekt:
+    * Metryka projektu (powierzchnia, lokalizacja, rok, zakres).
+    * Opowieść projektowa (koncepcja, wyzwania, materiały).
+    * Galeria wysokiej rozdzielczości z podglądem pełnoekranowym (Lightbox).
+    * Przycisk bezpośredniego zapytania o podobną realizację.
+
+--- 7. SEKCJA 4: OFERTA & PROCES (TRANSPARENT PACKAGES) ---
+- Format: Nowoczesne karty pakietów projektowych:
+    * 01. Projekt Funkcjonalny (Rzuty 2D, koncepcja układu)
+    * 02. Projekt Deweloperski (Układ ścian, wytyczne instalacji)
+    * 03. Projekt Koncepcyjny (Wizualizacje 3D, dobór materiałów)
+    * 04. Projekt Kompleksowy (Wizualizacje 3D, rysunki wykonawcze, kosztorys, wizyty w sklepach)
+    * 05. Nadzór Autorski (Koordynacja na budowie, dbałość o detale)
+- Etykiety Deliverables dla każdego pakietu.
+
+--- 8. SEKCJA 5: KONTAKT & ASYSTENT BRIEFU AI ---
+- Minimalistyczny formularz kontaktowy w stylu Glassmorphism.
+- Inteligentny Kreator Briefu AI (Web Speech API + tryb pytań krok po kroku).
+- Wizualizacja fal dźwiękowych (Audio Pulse Waveform) podczas nagrywania głosu.
+- Natychmiastowe generowanie ustrukturyzowanego briefu projektowego.

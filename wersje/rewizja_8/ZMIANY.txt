@@ -1,0 +1,10 @@
+LOG ZMIAN - REWIZJA 8 (AI Wizard & UI Scale)
+-------------------------------------------
+Data: Maj 2026
+
+GŁÓWNE ZMIANY:
+1. Skalowanie UI (+40%): Powiększenie Logo (110px) oraz linków nawigacji (1.1rem).
+2. Skalowanie Hero (+50%): Powiększenie przycisków CTA w sekcji głównej.
+3. Wdrożenie AI Wizard: Formularz głosowy z inteligentnym parserem danych (metraż, styl, budżet) i filtrem wulgaryzmów.
+4. Implementacja przycisku Instagrama w formie Pill-shaped obok głównych CTA.
+5. Ujednolicenie sekcji "O mnie" (rozmiary fontów i hierarchia wizualna).

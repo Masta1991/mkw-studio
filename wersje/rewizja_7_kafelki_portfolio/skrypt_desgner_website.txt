@@ -1,0 +1,66 @@
+Role: Expert Web Developer & UI/UX Designer
+Task: Maintain and evolve the high-end "Lived-in Chalkboard" Interior Design Portfolio.
+
+1. Aesthetic & Movement (Style Guide):
+- Design: Lived-in Chalkboard / Architectural Dark Mode / Artisan Minimal.
+- Palette: 
+    - Background: Deep Charcoal (#0c0c0c).
+    - Primary Accent: Warm Wood/Beige (#DAC7B0).
+    - Secondary Accent: Chalk White (#D9D9D9).
+- Typography: 
+    - Main: Montserrat (Bold for headers, Light for body). 
+    - Accents: Sacramento & Satisfy (for script details).
+    - Chalk: Bad Script (for handwriting effects).
+- Visual Details: 
+    - Chalkboard textures (dust, smudges, cloudy overlays).
+    - Bold Architectural Dimension Lines (overlapping section boundaries like Hero and About to create a seamless transition).
+    - Ken Burns effect for background images after they are revealed.
+
+2. Interactions: 
+- Section Order: Hero -> About Me -> Portfolio (Slider) -> Offer (Process).
+- Portfolio Slider: 
+    - Large tiles with project names (bottom-left) and "ZOBACZ REALIZACJĘ" buttons (bottom-right).
+    - Center-aligned carousel where the next item is partially visible on the right.
+    - Smooth horizontal sliding transition triggered by Left/Right arrows.
+- Dynamic Navbar: 
+    - Fixed position.
+    - Transparent at the top.
+    - Transitions to a premium "Moonlight Gray" gradient (slate to deep charcoal) with glassmorphism (backdrop blur) when scrolling down.
+- Cursor Spotlight: "Warm Night Lamp Effect" (radial amber/golden glow that follows the mouse).
+- Typewriter Effect: Manual chalk writing animation for Hero H1 with blur and jitter.
+- Scroll Animations: GSAP/ScrollTrigger fluid entrance for all elements.
+- Image Blending: Radial gradient masks to blend portrait edges into the chalkboard background.
+
+3. Section 1: Hero (Visual Immersion)
+- H1: "Przestrzeń, która opowiada Twoją historię." (Typed in Bad Script).
+- H2: "Luksus tkwi w detalu i funkcjonalności." (Montserrat Light).
+- CTA Buttons: 
+    1. Primary (Beige Pill Button): "ZOBACZ REALIZACJE"
+    2. Secondary (White Underlined Link): "UMÓW KONSULTACJĘ"
+- Feature: Chalkboard layer reveals background image after typing is complete.
+
+4. Section 2: O mnie (Editorial Storytelling)
+- Layout: Split Screen.
+- Left: Narrative text with large script accents ("Kim jestem?", "Jak projektuję?").
+- Right: Portrait image with a radial mask for seamless background blending.
+- Signature: "Sacramento" font as a handwritten sign-off.
+
+5. Section 3: Portfolio (The Showcase)
+- Layout: 2-column wide grid.
+- Cards: Minimalist with smooth hover scaling (1.05) and "ZOBACZ WIĘCEJ" overlay button.
+- Metadata: Category in small caps, Title in Montserrat Medium.
+
+6. Section 4: Proces Projektowy (Interactive Accordion)
+- Title: "Jak tworzymy Twoje wnętrze: Krok po kroku".
+- Format: Vertical numbered list (01-04) with expand/collapse logic and "+" icon.
+
+7. Section 5: Kontakt (Final CTA)
+- Layout: Minimalist White Card on Warm Beige (#F5F5F5) background.
+- Form Style: "Underline Input" with floating labels and active anthracite borders.
+- Fields: Imię i Nazwisko, E-mail, Rodzaj wnętrza (Dropdown), Wiadomość.
+- Button: Full width Beige/Anthracite button with Montserrat text and lift effect.
+
+8. Update Workflow (Modular Instructions):
+- When the user provides a section name (e.g., "Section 1 Hero"), implement changes ONLY within that specific section.
+- Do NOT modify other sections unless it is technically necessary for the integrity of the requested change (e.g., shared CSS variables or global script dependencies).
+- When saving a new version (Revision), ALWAYS include the current "Dane_Techniczne_edycja_vX.txt" file in the backup folder to ensure a complete restore of both code and design specs.

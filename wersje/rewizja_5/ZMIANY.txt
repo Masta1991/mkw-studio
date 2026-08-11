@@ -1,0 +1,10 @@
+LOG ZMIAN - REWIZJA 5 (Chalkboard Premium)
+-------------------------------------------
+Data: Maj 2026
+
+GŁÓWNE ZMIANY:
+1. Wdrożenie estetyki "Lived-in Chalkboard" (efekt tablicy kredowej).
+2. Animacja pisania kredą (Typewriter Effect) dla nagłówka Hero.
+3. Wstępna konfiguracja biblioteki GSAP i ScrollTrigger.
+4. Podział na sekcje: Hero, O mnie, Portfolio, Proces, Kontakt.
+5. Implementacja efektu "Cursor Spotlight" (bursztynowy blask).

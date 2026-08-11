@@ -1,0 +1,48 @@
+Role: Expert Web Developer & UI/UX Designer
+Task: Build a high-end Interior Design Portfolio website based on the provided aesthetic and structure.
+
+1. Aesthetic & Movement (Style Guide):
+- Design: Scandinavian Luxury / High-End Minimal.
+- Palette: Background White (#FFFFFF), Primary Accents Anthracite (#292929), Secondary Accents Warm Beige (#F5F5F5).
+- Typography: Main: Montserrat (Bold for headers, Light for body). Accent: Angela White (for quotes and subtitles).
+- Visual Details: Minimalist layout with large whitespace. Use thin 1px lines in Anthracite for section separators.
+- Interactions: 
+    - Implement "Cursor Spotlight" (a radial gradient mask following the mouse).
+    - Smooth Background Crossfade (transitions between project photos in the hero section).
+    - Fluid, scroll-triggered entrance animations for all elements (GSAP/ScrollTrigger).
+
+2. Section 1: Hero (Visual Immersion)
+- H1: "Przestrzeń, która opowiada Twoją historię." (Montserrat Bold)
+- H2: "Luksus tkwi w detalu i funkcjonalności." (Angela White)
+- CTA Buttons: 
+    1. Primary (Ghost - Anthracite Outline): "ZOBACZ REALIZACJE"
+    2. Secondary (Link with Underline): "UMÓW KONSULTACJĘ"
+
+3. Section 2: O mnie (Editorial Storytelling)
+- Layout: Asymmetrical grid (Large photo on the left, floating text on the right).
+- H2: "Projektowanie to dialog między estetyką a potrzebami."
+- Body: Focus on philosophy of design, natural materials, and creating timeless interiors.
+- Signature: "Angela White" font as a handwritten sign-off at the bottom of the section.
+
+4. Section 3: Portfolio (The Showcase)
+- Layout: 2-column wide grid with significant whitespace (Airy Layout).
+- Cards:
+    - Interactive Project Cards: Clean images without borders.
+    - Hover Interaction: On hover, the image scales slightly (1.05), and a "Ghost Button" with text "ZOBACZ WIĘCEJ" appears in the center.
+    - Typography: Project title in Montserrat Medium, color #292929.
+
+5. Section 4: Proces Projektowy (Interactive Accordion)
+- Title: "Jak tworzymy Twoje wnętrze: Krok po kroku".
+- Format: Vertical numbered list (1-4) with expand/collapse functionality.
+- Steps:
+    1. Inwentaryzacja i Brief (Initial meeting).
+    2. Projekt Funkcjonalny (Layout planning).
+    3. Wizualizacje 3D (Photorealistic renders).
+    4. Nadzór autorski (Implementation support).
+
+6. Section 5: Kontakt (Final CTA)
+- Background: Light Beige (#F5F5F5).
+- Functional Form: Minimalist "Underline Input" style (only bottom border).
+- Active State: Border changes to #292929 with "Floating Labels".
+- Fields: Imię i Nazwisko, E-mail, Rodzaj wnętrza (Dropdown), Wiadomość.
+- Button: Full width or large Anthracite (#292929) button with White Montserrat text and "Lift" hover effect.

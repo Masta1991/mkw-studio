@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gosia | Interior Design Portfolio</title>
+    <meta name="description"
+        content="Ekskluzywne projektowanie wnętrz w stylu Scandinavian Luxury. Przestrzeń, która opowiada Twoją historię.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Sacramento&family=Bad+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=8">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Cursor Spotlight -->
+    <div id="cursor-spotlight"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="site-logo">
+                <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 90" fill="none">
+                    <path d="M12 48 L40 18 L68 48" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    <line x1="18" y1="44" x2="18" y2="72" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                    <line x1="62" y1="44" x2="62" y2="72" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                    <line x1="18" y1="72" x2="62" y2="72" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                    <text x="76" y="52" font-family="Montserrat, sans-serif" font-weight="700" font-size="22" fill="white" letter-spacing="1">MKW</text>
+                    <text x="140" y="55" font-family="Sacramento, cursive" font-size="26" fill="white">Studio</text>
+                    <text x="76" y="68" font-family="Montserrat, sans-serif" font-weight="300" font-size="7" fill="rgba(255,255,255,0.7)" letter-spacing="3">MAŁGORZATA WOJTYSIAK</text>
+                    <text x="155" y="82" font-family="Sacramento, cursive" font-size="16" fill="rgba(255,255,255,0.65)">koncepcja</text>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">O MNIE</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#process">OFERTA</a></li>
+                <li><a href="tel:600100100" class="btn-phone">
+                    <span>600100100</span>
+                    <div class="phone-icon-circle">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.82 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero hero-chalkboard">
+        <div class="hero-image-bg">
+            <img src="hero_bg.png" alt="Luxury Interior Background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="chalk-bg"></div>
+        <div class="container hero-content">
+            <h1 id="hero-title">Przestrzeń, która opowiada Twoją historię.</h1>
+            <h2 id="hero-subtitle">Luksus tkwi w detalu i funkcjonalności.</h2>
+            <div class="hero-actions">
+                <a href="#portfolio" id="hero-primary-cta" class="btn btn-ghost">ZOBACZ REALIZACJE</a>
+                <a href="#contact" id="hero-secondary-cta" class="link-underline">UMÓW KONSULTACJĘ</a>
+            </div>
+        </div>
+
+        <div class="dimension-separator">
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">1450</span></div>
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">820</span></div>
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">640</span></div>
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">2100</span></div>
+            <div class="dim-tick"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-left reveal">
+            <div class="about-text">
+                <span class="accent-font">Kim jestem?</span>
+                <h3 id="about-title">NAZYWAM SIĘ MAŁGORZATA WOJTYSIAK</h3>
+                <div id="about-content">
+                    <p>Ukończyłam studia na Politechnice Warszawskiej oraz na Akademii Sztuk Pięknych w Warszawie. Swoje doświadczenie zdobywałam w warszawskich pracowniach zajmujących się projektowaniem wnętrz pod klucz. Od roku prowadzę własne studio, realizując zarówno projekty, jak i nadzory autorskie.</p>
+                </div>
+                <span class="accent-font" style="margin-top: 4rem;">Jak projektuję?</span>
+                <p>Zależy mi, aby wnętrze było ergonomiczne, intuicyjne w użytkowaniu, dopasowane do potrzeb tych, którzy w nim mieszkają. Wierzę, że dobrze zaprojektowana przestrzeń sama w sobie jest piękna, bo harmonia i funkcjonalność to fundamenty nowoczesnego designu.</p>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="about-image-wrapper reveal">
+                <img id="about-img" src="Zdjecia/o%20mnie/zdjecie%20glowne.jpg" alt="Małgorzata Wojtysiak">
+            </div>
+        </div>
+
+        <div class="dimension-separator">
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">1250</span></div>
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">980</span></div>
+            <div class="dim-tick"></div>
+            <div class="dim-line"><span class="dim-text">1100</span></div>
+            <div class="dim-tick"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-slider-section">
+        <div class="slider-header">
+            <div class="header-left">
+                <h2 class="accent-font">Portfolio</h2>
+                <h3 class="section-title">Wybrane realizacje</h3>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-arrow prev-btn" id="portfolio-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </button>
+                <button class="slider-arrow next-btn" id="portfolio-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="portfolio-slider-container">
+            <div class="portfolio-track" id="portfolio-track">
+                <!-- Projects injected by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="process" class="section process">
+        <div class="container">
+            <h2 class="accent-font">Oferta</h2>
+            <h3 id="process-title" class="reveal" style="text-align: center; margin-bottom: 4rem;">Jak tworzymy Twoje wnętrze: Krok po kroku</h3>
+            <div id="process-accordion" class="accordion reveal"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-card reveal">
+                <div class="contact-header">
+                    <h2>Skontaktuj się z nami</h2>
+                    <p>Stwórzmy razem coś wyjątkowego.</p>
+                </div>
+                <form id="contact-form" class="minimal-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Imię i Nazwisko</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="type" name="type">
+                            <option value="" disabled selected></option>
+                            <option value="mieszkanie">Mieszkanie / Dom</option>
+                            <option value="komercyjne">Wnętrze komercyjne</option>
+                            <option value="konsultacja">Konsultacja</option>
+                        </select>
+                        <label for="type">Rodzaj wnętrza</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Wiadomość</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">WYŚLIJ WIADOMOŚĆ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 GOSIA DESIGN. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="site_content.js?v=2"></script>
+    <script src="main.js?v=3"></script>
+</body>
+</html>

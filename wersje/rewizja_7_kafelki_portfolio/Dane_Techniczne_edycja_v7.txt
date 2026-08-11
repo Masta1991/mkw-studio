@@ -1,0 +1,90 @@
+DOKUMENTACJA TECHNICZNA EDYCJI - MKW STUDIO (REWIZJA 7)
+Data aktualizacji: 2026-05-04
+Cel: Kompleksowa referencja dla edycji wizualnej, funkcjonalnej i tekstowej.
+
+--- USTAWIENIA GLOBALNE (BASE) ---
+- CZCIONKI: 
+    * Montserrat (Główna, nowoczesna)
+    * Satisfy / Sacramento (Akcenty odręczne, ozdobne)
+    * Bad Script (Efekt pisma kredą)
+- KOLORY: 
+    * Tło: #0c0c0c (Głęboki węgiel)
+    * Akcent: #DAC7B0 (Ciepły beż)
+    * Tekst: #D9D9D9 (Kredowa biel)
+- EFEKTY SPECJALNE:
+    * Cursor Spotlight: Radialny gradient bursztynowy podążający za myszką.
+    * Tekstura tablicy (.chalk-bg): Filtr turbulencji SVG + szum.
+
+--- SEKCJA: NAWIGACJA (NAVBAR) ---
+- BACKGROUND: Start: Przezroczysty; Scroll: Gradient "Moonlight Gray" + Glassmorphism.
+- PRZYCISKI: Przycisk tel. z beżowym obramowaniem i ikoną w kółku.
+- EFEKTY: Płynne zmniejszanie paddingu i zmiana tła przy skrolowaniu.
+- POLA TEKSTOWE:
+    * LOGO (GŁÓWNE): Montserrat Bold, 22px ("MKW")
+    * LOGO (PODTYTUŁ): Sacramento, 26px ("Studio")
+    * LOGO (OPIS): Montserrat Light, 7px ("MAŁGORZATA WOJTYSIAK")
+    * LINKI MENU: Montserrat Medium, 0.8rem, Uppercase
+    * TEKST PRZYCISKU (TEL): Montserrat Bold, 0.9rem
+
+--- SEKCJA 1: HERO ---
+- BACKGROUND: #0c0c0c z warstwą kredową; Odsłania obraz "hero_bg.png" z efektem Ken Burns.
+- PRZYCISKI: Główny (Beżowy Pill); Drugorzędny (Biały link z podkreśleniem).
+- EFEKTY: Typewriter (animacja pisania kredą), Separator wymiarowy na dole.
+- POLA TEKSTOWE:
+    * HEADING 1 (H1): Bad Script, 5rem (Efekt maszyny do pisania)
+    * HEADING 2 (H2): Montserrat Light, 1.1rem, Uppercase, letter-spacing 5px
+    * PRZYCISK GŁÓWNY: Montserrat Bold, 0.85rem, Uppercase
+    * LINK POMOCNICZY: Montserrat Bold, 1rem (Underlined)
+    * TEKST WYMIARÓW: Montserrat, 0.7rem
+
+--- SEKCJA 2: O MNIE ---
+- BACKGROUND: #0c0c0c z teksturą tablicy.
+- PRZYCISKI: Brak (opcjonalne linki tekstowe).
+- EFEKTY: 
+    * Radial Mask (wtapianie portretu).
+    * Cascading Text Reveal: Elementy tekstowe pojawiają się kolejno (staggered animation).
+    * Separator wymiarowy.
+- POLA TEKSTOWE:
+    * AKCENTY (H2 STYLE): Montserrat Bold, 2.5rem, Uppercase ("Kim jestem?")
+    * HEADING 3 (H3): Montserrat Bold, 1.2rem, Uppercase ("NAZYWAM SIĘ...")
+    * TEKST GŁÓWNY (BODY): Montserrat Light, 1rem, line-height 1.8
+    * TEKST WYMIARÓW: Montserrat, 0.7rem
+
+--- SEKCJA 3: PORTFOLIO (COLLAGE GRID) ---
+- BACKGROUND: #0c0c0c (Głęboki węgiel).
+- PRZYCISKI: Brak (uproszczony wygląd).
+- EFEKTY: 
+    * Instagram-style Collage: Siatka o zróżnicowanych rozmiarach kafelków (span 2, 3, 4, 6).
+    * Seamless Gaps: Przerwy między zdjęciami w kolorze tła (20px).
+    * Dynamic Asynchronous Slide-Up: Projekty wjeżdżają od dołu niesynchronicznie (zróżnicowane opóźnienia i punkty startowe).
+    * GSAP Scrub (1.5): Ruch powiązany ze skrolowaniem, dający efekt "pływania" kafelków.
+    * Hover: Płynne powiększanie zdjęcia (scale 1.08).
+- POLA TEKSTOWE:
+    * Nagłówek "Portfolio": Montserrat Bold, 2.5rem, Uppercase.
+    * TYTUŁ PROJEKTU (H3): Montserrat Bold, 1.2rem, Uppercase (na kafelkach).
+
+--- SEKCJA 4: OFERTA (PROCES) ---
+- BACKGROUND: #0c0c0c + tekstura tablicy.
+- PRZYCISKI: Nagłówki akordeonu jako elementy interaktywne.
+- EFEKTY: Akordeon (płynne max-height), obrót ikony "+".
+- POLA TEKSTOWE:
+    * NAGŁÓWEK SEKCJI (H2): Montserrat Bold, 2.5rem, Uppercase
+    * NAGŁÓWEK OPISOWY (H3): Montserrat Medium, 1.5rem, Uppercase
+    * NUMERACJA (STEPS): Montserrat Bold, 1rem (01, 02...)
+    * TYTUŁY AKORDEONU: Montserrat Light, 1.5rem, Uppercase
+    * TEKST AKORDEONU (BODY): Montserrat Light, 1rem, line-height 1.8
+
+--- SEKCJA 5: KONTAKT ---
+- BACKGROUND: #0c0c0c + tekstura tablicy; Kontener z wymuszonym z-index: 2.
+- PRZYCISKI: Pełnowymiarowy przycisk beżowy (#DAC7B0), Montserrat Bold, Uppercase.
+- EFEKTY: Floating Labels, Underline Focus, Glassmorphism Card.
+- POLA TEKSTOWE:
+    * NAGŁÓWEK KARTY (H2): Montserrat Bold, 2rem, Uppercase.
+    * PODTYTUŁ KARTY: Montserrat Light, 1rem (Kredowa biel).
+    * ETYKIETY FORMULARZA (LABELS): Montserrat Bold, 0.75rem, Uppercase.
+    * TEKST PRZYCISKU: Montserrat Bold, 1rem, Uppercase.
+
+--- STOPKA (FOOTER) ---
+- BACKGROUND: #0c0c0c (czysty).
+- POLA TEKSTOWE:
+    * TEKST COPYRIGHT: Montserrat Light, 0.8rem
