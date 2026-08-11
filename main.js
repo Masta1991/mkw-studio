@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initPasswordGate();
     initHeaderScroll();
     initMobileNav();
     initPortfolioGrid();
@@ -12,6 +13,39 @@ document.addEventListener('DOMContentLoaded', () => {
     initCaseStudyModal();
     initAIBriefWizard();
 });
+
+/* --------------------------------------------------------------------------
+   0. Password Gate (Hasło: mkw2026)
+   -------------------------------------------------------------------------- */
+function initPasswordGate() {
+    const gate = document.getElementById('password-gate');
+    const form = document.getElementById('password-form');
+    const input = document.getElementById('gate-password-input');
+    const errorMsg = document.getElementById('gate-error');
+
+    if (!gate || !form || !input) return;
+
+    if (sessionStorage.getItem('mkw_auth') === 'true') {
+        gate.style.display = 'none';
+        return;
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const entered = input.value.trim();
+        if (entered === 'mkw2026') {
+            sessionStorage.setItem('mkw_auth', 'true');
+            gate.style.opacity = '0';
+            setTimeout(() => {
+                gate.style.display = 'none';
+            }, 300);
+        } else {
+            if (errorMsg) errorMsg.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    });
+}
 
 /* --------------------------------------------------------------------------
    1. Header Scroll

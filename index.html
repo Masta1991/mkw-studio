@@ -24,6 +24,29 @@
 </head>
 
 <body>
+    <!-- Client Password Gate (Hasło: mkw2026) -->
+    <div id="password-gate" class="password-gate-overlay">
+        <div class="password-gate-card">
+            <div class="logo-house-icon gate-icon">
+                <svg viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 20L21 4L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 17.5V32H35V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="logo-typography">
+                <span class="logo-title">mkw <span class="logo-script">Studio</span></span>
+                <span class="logo-subtitle">ARCHITEKTURA WNĘTRZ — WARSZAWA</span>
+            </div>
+            <p class="gate-instructions">Strona w trakcie przygotowania. Wpisz hasło dostępu, aby wejść.</p>
+            <form id="password-form" class="gate-form">
+                <div class="gate-input-wrap">
+                    <input type="password" id="gate-password-input" placeholder="Wpisz hasło..." autocomplete="current-password" autofocus required>
+                    <button type="submit" class="btn-sage gate-submit-btn">Wejdź</button>
+                </div>
+                <p id="gate-error" class="gate-error-msg" style="display: none;">Nieprawidłowe hasło. Spróbuj ponownie.</p>
+            </form>
+        </div>
+    </div>
     <!-- Site Header & Navigation (Warm Minimalist) -->
     <header class="site-header" id="site-header">
         <div class="header-container">
