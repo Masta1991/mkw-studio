@@ -8,6 +8,14 @@
     <meta name="description"
         content="Personalizowane projekty wnętrz i kompleksowe wykończenie pod klucz w Warszawie. Architektura zdefiniowana przez ergonomię, światło i naturalne materiały.">
 
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="MKW Studio | Architektura Wnętrz — Warszawa">
+    <meta property="og:description" content="Personalizowane projekty wnętrz i kompleksowe wykończenie pod klucz. Japandi, minimalizm, naturalne materiały.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:image" content="Zdjecia/hero_day.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Fonts: Playfair Display (Editorial Serif) + Montserrat (Clean Modern Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +23,68 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&subset=latin,latin-ext&display=swap"
         rel="stylesheet">
 
+    <!-- Preload critical fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=40">
+    <link rel="stylesheet" href="style.css?v=50">
 
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MKW Studio — Architektura Wnętrz",
+        "description": "Pracownia architektury wnętrz Małgorzaty Wojtysiak. Personalizowane projekty rezydencji i apartamentów oraz kompleksowe wykończenie pod klucz w Warszawie.",
+        "url": "https://mkwstudio.pl",
+        "telephone": "+48600100100",
+        "email": "kontakt@mkwstudio.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warszawa",
+            "addressRegion": "Mazowieckie",
+            "addressCountry": "PL"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Małgorzata Wojtysiak",
+            "jobTitle": "Architekt Wnętrz"
+        },
+        "sameAs": [
+            "https://www.instagram.com/mkwstudio_/"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Usługi Architektoniczne",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Projekt Funkcjonalny",
+                    "description": "Optymalizacja układu ścian, ergonomia i strefy funkcjonalne"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Projekt Koncepcyjny z Wizualizacjami 3D",
+                    "description": "Fotorealistyczne wizualizacje 3D, moodboard materiałowy"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Projekt Kompleksowy (Wykonawczy)",
+                    "description": "Pełna dokumentacja wykonawcza z rysunkami technicznymi"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Nadzór Autorski pod Klucz",
+                    "description": "Pełna koordynacja budowy i kontrola jakości"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -143,6 +207,37 @@
             </div>
         </section>
 
+        <!-- 1.5 Animated Stats Counter Section -->
+        <section id="stats" class="stats-counter-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-target="10" data-suffix="+">
+                        <span class="stat-number">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Lat Doświadczenia</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item" data-target="40" data-suffix="+">
+                        <span class="stat-number">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Realizacji pod Klucz</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item" data-target="100" data-suffix="%">
+                        <span class="stat-number">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Projektów Kompleksowych</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item" data-target="98" data-suffix="%">
+                        <span class="stat-number">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Zadowolonych Klientów</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 2. Realizacje / Portfolio Section (Clean 2-Column Editorial Grid) -->
         <section id="portfolio" class="portfolio-section">
             <div class="container">
@@ -202,6 +297,61 @@
 
                 <div class="offer-cards-grid" id="offer-grid">
                     <!-- Injected by main.js -->
+                </div>
+
+                <!-- Investment Calculator -->
+                <div class="calculator-section" id="calculator">
+                    <div class="calc-header">
+                        <span class="calc-eyebrow">ESTYMATOR INWESTYCJI</span>
+                        <h3 class="calc-title">Sprawdź orientacyjny koszt projektu</h3>
+                        <p class="calc-desc">Przesuń suwaki, aby otrzymać wstępną wycenę. Dokładną ofertę przygotujemy po bezpłatnej konsultacji.</p>
+                    </div>
+                    <div class="calc-body">
+                        <div class="calc-inputs">
+                            <div class="calc-input-group">
+                                <label class="calc-label">Typ nieruchomości</label>
+                                <div class="calc-type-pills" id="calc-type-pills">
+                                    <button class="calc-pill active" data-type="apartment">Mieszkanie</button>
+                                    <button class="calc-pill" data-type="house">Dom / Rezydencja</button>
+                                    <button class="calc-pill" data-type="commercial">Lokal Komercyjny</button>
+                                </div>
+                            </div>
+                            <div class="calc-input-group">
+                                <label class="calc-label">Metraż: <strong id="calc-area-value">80</strong> m²</label>
+                                <input type="range" id="calc-area" min="25" max="500" value="80" class="calc-slider">
+                                <div class="calc-range-labels"><span>25 m²</span><span>500 m²</span></div>
+                            </div>
+                            <div class="calc-input-group">
+                                <label class="calc-label">Zakres usług</label>
+                                <div class="calc-checkboxes">
+                                    <label class="calc-check"><input type="checkbox" id="calc-concept" checked> Projekt koncepcyjny</label>
+                                    <label class="calc-check"><input type="checkbox" id="calc-3d" checked> Wizualizacje 3D</label>
+                                    <label class="calc-check"><input type="checkbox" id="calc-exec"> Dokumentacja wykonawcza</label>
+                                    <label class="calc-check"><input type="checkbox" id="calc-supervision"> Nadzór autorski</label>
+                                </div>
+                            </div>
+                            <div class="calc-input-group">
+                                <label class="calc-label">Standard wykończenia</label>
+                                <div class="calc-type-pills" id="calc-standard-pills">
+                                    <button class="calc-pill" data-standard="standard">Standard</button>
+                                    <button class="calc-pill active" data-standard="premium">Premium</button>
+                                    <button class="calc-pill" data-standard="luxury">Ultra Luxury</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-result-panel">
+                            <div class="calc-result-card">
+                                <span class="calc-result-label">Orientacyjny koszt projektu</span>
+                                <div class="calc-result-price" id="calc-result-price">25 000 – 40 000 zł</div>
+                                <span class="calc-result-note">Cena nie obejmuje materiałów wykończeniowych i ekip budowlanych</span>
+                                <div class="calc-result-details" id="calc-result-details">
+                                    <div class="calc-detail-row"><span>Szacowany czas realizacji</span><strong id="calc-time">6-8 tygodni</strong></div>
+                                    <div class="calc-detail-row"><span>Rekomendowany pakiet</span><strong id="calc-package">Projekt Kompleksowy</strong></div>
+                                </div>
+                                <a href="#contact" class="btn-sage calc-cta">Umów bezpłatną konsultację</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -425,8 +575,84 @@
         </div>
     </div>
 
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Chatbot AI Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <!-- Toggle Button -->
+        <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Otwórz czat z asystentem MKW Studio">
+            <svg class="chatbot-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <line x1="9" y1="10" x2="9" y2="10"/>
+                <line x1="12" y1="10" x2="12" y2="10"/>
+                <line x1="15" y1="10" x2="15" y2="10"/>
+            </svg>
+            <svg class="chatbot-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+            <span class="chatbot-badge">1</span>
+        </button>
+
+        <!-- Chat Panel -->
+        <div id="chatbot-panel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar">
+                        <svg viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="18">
+                            <path d="M4 20L21 4L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 17.5V32H35V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="chatbot-header-name">Asystent MKW Studio</span>
+                        <span class="chatbot-header-status">● Online</span>
+                    </div>
+                </div>
+                <button id="chatbot-minimize" class="chatbot-minimize" aria-label="Minimalizuj czat">—</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <!-- Messages injected by JS -->
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Napisz wiadomość..." autocomplete="off">
+                <button id="chatbot-send" class="chatbot-send" aria-label="Wyślij">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendly Booking Modal -->
+    <div id="booking-modal" class="booking-modal-backdrop" aria-hidden="true">
+        <div class="booking-modal-dialog">
+            <button class="booking-modal-close" id="booking-modal-close" aria-label="Zamknij">×</button>
+            <div class="booking-modal-content">
+                <div class="booking-modal-header">
+                    <h3>Umów bezpłatną konsultację</h3>
+                    <p>Wybierz dogodny termin na 15-minutową rozmowę o Twoim projekcie.</p>
+                </div>
+                <div class="booking-modal-body" id="booking-embed">
+                    <div class="booking-placeholder">
+                        <div class="booking-placeholder-icon">📅</div>
+                        <p>Integracja z Calendly / Cal.com</p>
+                        <p class="booking-placeholder-note">Po skonfigurowaniu konta, tutaj pojawi się interaktywny kalendarz rezerwacji.</p>
+                        <a href="mailto:kontakt@mkwstudio.pl" class="btn-sage">Napisz na e-mail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <script src="site_content.js?v=40"></script>
-    <script src="main.js?v=40"></script>
+    <script src="site_content.js?v=50"></script>
+    <script src="main.js?v=50"></script>
 </body>
 </html>
