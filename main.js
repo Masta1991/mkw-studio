@@ -207,7 +207,7 @@ function initOfferGrid() {
         
         let deliverablesHtml = '';
         if (pkg.deliverables && pkg.deliverables.length > 0) {
-            deliverablesHtml = pkg.deliverables.slice(0, 4).map(d => `<li>${d}</li>`).join('');
+            deliverablesHtml = pkg.deliverables.map(d => `<li>${d}</li>`).join('');
         }
 
         card.innerHTML = `
@@ -916,7 +916,7 @@ function initScrollReveal() {
     gsap.registerPlugin(ScrollTrigger);
 
     // Reveal sections on scroll
-    const sections = document.querySelectorAll('.section-center-heading, .offer-clean-card, .about-split-layout, .calculator-section, .contact-main-grid');
+    const sections = document.querySelectorAll('.section-center-heading, .about-split-layout, .calculator-section, .contact-main-grid');
     
     sections.forEach(section => {
         gsap.from(section, {
